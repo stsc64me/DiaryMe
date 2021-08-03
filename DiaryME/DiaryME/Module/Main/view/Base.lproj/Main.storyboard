@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v29-m0-ypo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Diary List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiaryME" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,18 +20,6 @@
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8o-9i-dQt">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Diary List" id="OjX-st-m38">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="0x3-RL-8Gz">
-                                            <connections>
-                                                <action selector="btnNewDiary:" destination="BYZ-38-t0r" id="cIc-nT-omc"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XZW-k9-tIX">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -40,24 +28,68 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="y8o-9i-dQt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kky-Ep-FNx"/>
+                            <constraint firstItem="XZW-k9-tIX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2hr-ak-1eC"/>
                             <constraint firstItem="Xa2-BP-17t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PhZ-lz-Hzg"/>
                             <constraint firstItem="XZW-k9-tIX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tvz-d3-vfb"/>
-                            <constraint firstItem="XZW-k9-tIX" firstAttribute="top" secondItem="y8o-9i-dQt" secondAttribute="bottom" id="UB5-d3-Kft"/>
                             <constraint firstItem="XZW-k9-tIX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WX4-D0-mhZ"/>
                             <constraint firstItem="Xa2-BP-17t" firstAttribute="top" secondItem="XZW-k9-tIX" secondAttribute="bottom" id="bJw-w9-WRE"/>
                             <constraint firstItem="Xa2-BP-17t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bY8-eH-PKx"/>
-                            <constraint firstItem="y8o-9i-dQt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fdb-D4-ZfX"/>
-                            <constraint firstItem="y8o-9i-dQt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iy4-gd-Rzb"/>
                             <constraint firstItem="Xa2-BP-17t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ltZ-e1-vJs"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Diary List" id="Ujl-ls-EzZ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cjI-Ra-O78">
+                            <connections>
+                                <action selector="btnNewDiary:" destination="BYZ-38-t0r" id="tI2-sL-SFT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="diaryTable" destination="Xa2-BP-17t" id="zu5-OF-pYl"/>
-                        <outlet property="navbar" destination="y8o-9i-dQt" id="oPA-fK-WtW"/>
+                        <outlet property="searchDiaryList" destination="XZW-k9-tIX" id="5k1-ws-RmP"/>
+                        <segue destination="CJd-sD-lZs" kind="show" identifier="addDiary" id="Vx8-uA-4fp"/>
+                        <segue destination="LLe-NO-2X9" kind="show" identifier="detailView" id="NTX-e3-Ge2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="93.75"/>
+        </scene>
+        <!--CreateDiary-->
+        <scene sceneID="hDS-yH-vcY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateDiary" id="CJd-sD-lZs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TRi-ng-CwO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTS-PC-yqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665.9420289855075" y="8.7053571428571423"/>
+        </scene>
+        <!--DetailDiary-->
+        <scene sceneID="PH2-mb-tXM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailDiary" id="LLe-NO-2X9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ieR-Pf-ogN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZZ-SG-Qzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671.0144927536232" y="167.41071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pk8-Jb-pXE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v29-m0-ypo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yWF-l3-LT8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ST9-lX-gLC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Owm-aG-1Z8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111.59420289855073" y="93.75"/>
         </scene>

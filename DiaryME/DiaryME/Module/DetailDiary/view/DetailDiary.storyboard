@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deatil Diary-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S24-6d-Qad">
+                                <rect key="frame" x="0.0" y="81" width="414" height="781"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N69-7T-6nK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="LNk-hG-MEw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="N69-7T-6nK" firstAttribute="leading" secondItem="S24-6d-Qad" secondAttribute="leading" id="Gr7-nm-COl"/>
+                                    <constraint firstItem="N69-7T-6nK" firstAttribute="top" secondItem="S24-6d-Qad" secondAttribute="top" id="JNV-OX-ZcN"/>
+                                    <constraint firstItem="N69-7T-6nK" firstAttribute="width" secondItem="S24-6d-Qad" secondAttribute="width" id="UD3-Xk-D0d"/>
+                                    <constraint firstAttribute="bottom" secondItem="N69-7T-6nK" secondAttribute="bottom" constant="-219" id="Z6f-7F-7eb"/>
+                                    <constraint firstItem="N69-7T-6nK" firstAttribute="centerX" secondItem="S24-6d-Qad" secondAttribute="centerX" id="c0I-je-DTi"/>
+                                    <constraint firstAttribute="trailing" secondItem="N69-7T-6nK" secondAttribute="trailing" id="mjS-f7-wMo"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : 3 Aug 12:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HE-qP-rCz">
+                                <rect key="frame" x="20" y="44" width="187" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S24-6d-Qad" firstAttribute="top" secondItem="8HE-qP-rCz" secondAttribute="bottom" constant="8" symbolic="YES" id="6Wi-Pt-b2d"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="S24-6d-Qad" secondAttribute="bottom" id="LXA-Ke-WBY"/>
+                            <constraint firstItem="S24-6d-Qad" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="TSJ-sw-wlJ"/>
+                            <constraint firstItem="8HE-qP-rCz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="aEY-g4-jYO"/>
+                            <constraint firstItem="S24-6d-Qad" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lH2-Zf-m9v"/>
+                            <constraint firstItem="S24-6d-Qad" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="pGM-aZ-0W5"/>
+                            <constraint firstItem="8HE-qP-rCz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yHM-QU-fZG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Deatil Diary" id="8Ea-tg-S23"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
