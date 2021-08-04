@@ -11,19 +11,50 @@
         <!--Deatil Diary-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="CreateDiaryViewController" customModule="DiaryME" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S24-6d-Qad">
-                                <rect key="frame" x="0.0" y="81" width="414" height="781"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N69-7T-6nK">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-e5-dig">
+                                                <rect key="frame" x="57" y="94" width="300" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="G07-DE-Zpy"/>
+                                                    <constraint firstAttribute="height" constant="200" id="N0m-kY-dF4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPW-tm-hfE">
+                                                <rect key="frame" x="15" y="319" width="384" height="681"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <mutableString key="text">   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diary Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4w-8j-S9n">
+                                                <rect key="frame" x="124.5" y="20" width="165.5" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="hs7-e5-dig" firstAttribute="centerX" secondItem="N69-7T-6nK" secondAttribute="centerX" id="0cO-aZ-G3w"/>
+                                            <constraint firstItem="p4w-8j-S9n" firstAttribute="top" secondItem="N69-7T-6nK" secondAttribute="top" constant="20" id="2O6-vZ-HkN"/>
+                                            <constraint firstItem="WPW-tm-hfE" firstAttribute="leading" secondItem="N69-7T-6nK" secondAttribute="leading" constant="15" id="4uN-TW-KYB"/>
+                                            <constraint firstAttribute="trailing" secondItem="WPW-tm-hfE" secondAttribute="trailing" constant="15" id="HLH-ks-cfB"/>
                                             <constraint firstAttribute="height" constant="1000" id="LNk-hG-MEw"/>
+                                            <constraint firstAttribute="bottom" secondItem="WPW-tm-hfE" secondAttribute="bottom" id="RPf-fj-vb6"/>
+                                            <constraint firstItem="WPW-tm-hfE" firstAttribute="top" secondItem="hs7-e5-dig" secondAttribute="bottom" constant="25" id="Y1c-9u-2Lt"/>
+                                            <constraint firstItem="hs7-e5-dig" firstAttribute="top" secondItem="p4w-8j-S9n" secondAttribute="bottom" constant="34" id="ffX-fc-nCa"/>
+                                            <constraint firstItem="p4w-8j-S9n" firstAttribute="centerX" secondItem="N69-7T-6nK" secondAttribute="centerX" id="oS6-3B-l2J"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -37,20 +68,31 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : 3 Aug 12:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HE-qP-rCz">
-                                <rect key="frame" x="20" y="44" width="187" height="29"/>
+                                <rect key="frame" x="20" y="56" width="187" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-3R-dZG">
+                                <rect key="frame" x="344" y="45.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="64m-Dz-Zaq"/>
+                                    <constraint firstAttribute="width" constant="50" id="NKV-HL-YEk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="I1H-3R-dZG" firstAttribute="centerY" secondItem="8HE-qP-rCz" secondAttribute="centerY" id="5Ov-2L-MRU"/>
                             <constraint firstItem="S24-6d-Qad" firstAttribute="top" secondItem="8HE-qP-rCz" secondAttribute="bottom" constant="8" symbolic="YES" id="6Wi-Pt-b2d"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="S24-6d-Qad" secondAttribute="bottom" id="LXA-Ke-WBY"/>
                             <constraint firstItem="S24-6d-Qad" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="TSJ-sw-wlJ"/>
-                            <constraint firstItem="8HE-qP-rCz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="aEY-g4-jYO"/>
+                            <constraint firstItem="8HE-qP-rCz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="aEY-g4-jYO"/>
                             <constraint firstItem="S24-6d-Qad" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lH2-Zf-m9v"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="I1H-3R-dZG" secondAttribute="trailing" constant="20" id="n9U-N5-l3M"/>
                             <constraint firstItem="S24-6d-Qad" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="pGM-aZ-0W5"/>
                             <constraint firstItem="8HE-qP-rCz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yHM-QU-fZG"/>
                         </constraints>
@@ -63,6 +105,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
