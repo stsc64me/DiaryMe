@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var diaryName:[String]?
     var diaryContent:[String]?
     var diaryTime:[String]?
+    var isSelected:Int?
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,14 @@ class ViewController: UIViewController {
             createViewController.diaryContent = self.diaryContent ?? []
             createViewController.diaryUrlImage = self.diaryUrlImage ?? []
             createViewController.diaryTime = self.diaryTime ?? []
+        }
+        
+        if let deteailViewController = segue.destination as? DetailDiaryViewController {
+            deteailViewController.diaryName = self.diaryName ?? []
+            deteailViewController.diaryContent = self.diaryContent ?? []
+            deteailViewController.diaryUrlImage = self.diaryUrlImage ?? []
+            deteailViewController.diaryTime = self.diaryTime ?? []
+            deteailViewController.indexIsSelect = isSelected
         }
     }
     
@@ -128,6 +137,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        isSelected = indexPath.row
         self.performSegue(withIdentifier: "detailView", sender: self)
     }
     
