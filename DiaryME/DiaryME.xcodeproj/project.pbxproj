@@ -304,6 +304,7 @@
 				F8C9761E26B8F11B0085A2B5 /* Sources */,
 				F8C9761F26B8F11B0085A2B5 /* Frameworks */,
 				F8C9762026B8F11B0085A2B5 /* Resources */,
+				A676BD6C14C9953892BCB9D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +342,7 @@
 				F8C9763F26B8F11D0085A2B5 /* Sources */,
 				F8C9764026B8F11D0085A2B5 /* Frameworks */,
 				F8C9764126B8F11D0085A2B5 /* Resources */,
+				3BAB4A23246A739501A14F11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,6 +428,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3BAB4A23246A739501A14F11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiaryME-DiaryMEUITests/Pods-DiaryME-DiaryMEUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiaryME-DiaryMEUITests/Pods-DiaryME-DiaryMEUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DiaryME-DiaryMEUITests/Pods-DiaryME-DiaryMEUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		64860CDA73C100861412536C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +465,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A676BD6C14C9953892BCB9D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiaryME/Pods-DiaryME-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiaryME/Pods-DiaryME-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DiaryME/Pods-DiaryME-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA36D7AA8DD33D70487EFBAA /* [CP] Check Pods Manifest.lock */ = {

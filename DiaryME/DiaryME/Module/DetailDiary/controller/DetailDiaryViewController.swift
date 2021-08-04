@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BNImagePageView
 
 class DetailDiaryViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -28,9 +29,21 @@ class DetailDiaryViewController: UIViewController, UINavigationControllerDelegat
     var isEdit: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        diaryImage.isUserInteractionEnabled = true
+        let doubleTapGest = UITapGestureRecognizer(target: self, action: #selector(self.handleDoubleTapScrollView(recognizer:)))
+        diaryImage.addGestureRecognizer(doubleTapGest)
         btnSelectImage.isHidden = true
         self.contentTextView.isEditable = false
         self.setUIDiaryDetail()
+    }
+    
+    @objc private func handleDoubleTapScrollView(recognizer: UITapGestureRecognizer) {
+        
+        if let mImageView = recognizer.view as? UIImageView {
+            self.navigationController?.BNImagePage(
+                mImageViewShowFirst: mImageView, sImageUrl: ""
+            )
+        }
     }
     
     private func setUIDiaryDetail() {
