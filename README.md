@@ -57,7 +57,7 @@ mvc
 3. CocoaPod
 4. Keep data to local by file plist
 5. How to use stroryborad set constain
-
+6. Assets image
 
 
 
