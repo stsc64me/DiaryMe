@@ -11,7 +11,7 @@ Update pod to make sure that plugins is up-to-date
 ```
 pod update
 ```
-#### Video Demo:  
+#### Video Demo:  https://youtu.be/W50WwbvTKFU
 
 ## What will your software do? What features will it have? How will it be executed?
 
@@ -24,14 +24,22 @@ pod update
 2. Edit diary
 3. Selection diary
 4. Delete  diary
-5. Search diary 
 
-## What new skills will you need to acquire? What topics will you need to research?
+### Pattern design
+mvc
+
+## What new skills will you need to acquire? 
+1.  File plist how to use for keep data on local mobile
+2.  Pattern design  for developer
+3.  Auto layout and UI
+
+## What topics will you need to research?
 
 1. Swift syntax programming 
 2. Xode IDE for develop 
 3. CocoaPod
 4. Keep data to local by file plist
+5. How to use stroryborad set constain
 
 
 
