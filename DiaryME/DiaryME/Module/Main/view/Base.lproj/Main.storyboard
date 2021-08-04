@@ -17,22 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xa2-BP-17t">
-                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XZW-k9-tIX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XZW-k9-tIX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2hr-ak-1eC"/>
                             <constraint firstItem="Xa2-BP-17t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PhZ-lz-Hzg"/>
-                            <constraint firstItem="XZW-k9-tIX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tvz-d3-vfb"/>
-                            <constraint firstItem="XZW-k9-tIX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WX4-D0-mhZ"/>
-                            <constraint firstItem="Xa2-BP-17t" firstAttribute="top" secondItem="XZW-k9-tIX" secondAttribute="bottom" id="bJw-w9-WRE"/>
+                            <constraint firstItem="Xa2-BP-17t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YNk-tg-Jw1"/>
                             <constraint firstItem="Xa2-BP-17t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bY8-eH-PKx"/>
                             <constraint firstItem="Xa2-BP-17t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ltZ-e1-vJs"/>
                         </constraints>
@@ -46,7 +39,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="diaryTable" destination="Xa2-BP-17t" id="zu5-OF-pYl"/>
-                        <outlet property="searchDiaryList" destination="XZW-k9-tIX" id="5k1-ws-RmP"/>
                         <segue destination="CJd-sD-lZs" kind="show" identifier="addDiary" id="Vx8-uA-4fp"/>
                         <segue destination="LLe-NO-2X9" kind="show" identifier="detailView" id="NTX-e3-Ge2"/>
                     </connections>

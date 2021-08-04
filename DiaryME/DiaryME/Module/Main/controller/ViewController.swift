@@ -10,9 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var diaryTable: UITableView!
-    @IBOutlet var searchDiaryList: UISearchBar!
     
-    var filteredData: [String]?
     var diaryUrlImage:[String]?
     var diaryName:[String]?
     var diaryContent:[String]?
@@ -24,7 +22,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.diaryTable.delegate = self
         self.diaryTable.dataSource = self
-        self.searchDiaryList.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +62,6 @@ class ViewController: UIViewController {
         self.diaryName = nameDiary as? [String]
         self.diaryTime = timeDiary as? [String]
         self.diaryContent = contentDiary as? [String]
-        self.filteredData = diaryName
         self.diaryTable.reloadData()
     }
     
@@ -116,12 +112,12 @@ class ViewController: UIViewController {
 extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredData?.count ?? 0
+        return diaryName?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("DiaryViewCell", owner: self, options: nil)?.first as! DiaryViewCell
-        let diaryName = filteredData?[indexPath.row] ?? ""
+        let diaryName = diaryName?[indexPath.row] ?? ""
         let timeDiary = diaryTime?[indexPath.row] ?? ""
         let imagstr = diaryUrlImage?[indexPath.row] ?? ""
         
@@ -152,7 +148,6 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
             self.diaryName?.remove(at: indexPath.row)
             self.diaryContent?.remove(at: indexPath.row)
             self.diaryTime?.remove(at: indexPath.row)
-            self.filteredData = self.diaryName
             self.addToPlist(
                 diaryUrlImage: self.diaryUrlImage ?? [],
                 diaryName: self.diaryName ?? [],
@@ -162,14 +157,5 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
                     self.diaryTable.reloadData()
             })
         }
-    }
-}
-extension ViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredData = searchText.isEmpty ? diaryName : diaryName?.filter({(dataString: String) -> Bool in
-                return dataString.range(of: searchText, options: .caseInsensitive) != nil
-            })
-
-        self.diaryTable.reloadData()
     }
 }
