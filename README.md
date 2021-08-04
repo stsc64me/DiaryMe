@@ -28,6 +28,23 @@ pod update
 ### Pattern design
 mvc
 
+### File stucture
+1. DiaryME
+    - Module
+        - DiaryList.plist
+        - Main
+            - controller
+            - view
+            - cell
+        - DetailDiary
+            - controller
+            - view
+        - CreateDiary
+            - controller
+            - view
+    Assets
+    LaunchScreen.storyboard
+
 ## What new skills will you need to acquire? 
 1.  File plist how to use for keep data on local mobile
 2.  Pattern design  for developer
@@ -40,6 +57,10 @@ mvc
 3. CocoaPod
 4. Keep data to local by file plist
 5. How to use stroryborad set constain
+
+
+
+
 
 
 
