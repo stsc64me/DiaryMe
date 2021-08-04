@@ -25,9 +25,6 @@ class ViewController: UIViewController {
         self.diaryTable.delegate = self
         self.diaryTable.dataSource = self
         self.searchDiaryList.delegate = self
-        
-        let dismiss: UITapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(dismiss)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,10 +49,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK: - object functions
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
+    
     //MARK: - functions
     func getAllImagePlist() {
         let docsBaseURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

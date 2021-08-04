@@ -20,10 +20,10 @@ pod update
 2. Application DiaryMe  created to record specific events in daily life. Important events such as anniversaries, birthdays, weddings, or days of regret, application this was built according to the above reasons.
 
 ### Feature 
-1. Add diary
+1. Add diary 
 2. Edit diary
-3. Selection driary
-4. Delete  driary
+3. Selection diary
+4. Delete  diary
 5. Search diary 
 
 ## What new skills will you need to acquire? What topics will you need to research?
@@ -31,4 +31,7 @@ pod update
 1. Swift syntax programming 
 2. Xode IDE for develop 
 3. CocoaPod
+4. Keep data to local by file plist
+
+
 

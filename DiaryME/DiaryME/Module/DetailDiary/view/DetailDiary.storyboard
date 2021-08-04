@@ -23,41 +23,43 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hs7-e5-dig">
-                                                <rect key="frame" x="57" y="94" width="300" height="200"/>
+                                                <rect key="frame" x="57" y="98" width="300" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="G07-DE-Zpy"/>
                                                     <constraint firstAttribute="height" constant="200" id="N0m-kY-dF4"/>
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPW-tm-hfE">
-                                                <rect key="frame" x="15" y="365" width="384" height="635"/>
+                                                <rect key="frame" x="15" y="369" width="384" height="631"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <mutableString key="text">   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <string key="text">   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diary Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4w-8j-S9n">
-                                                <rect key="frame" x="124.5" y="20" width="165.5" height="40"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Diary Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pif-JU-KD7">
+                                                <rect key="frame" x="57" y="20" width="300" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="7LJ-oo-XhE"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="hs7-e5-dig" firstAttribute="centerX" secondItem="N69-7T-6nK" secondAttribute="centerX" id="0cO-aZ-G3w"/>
-                                            <constraint firstItem="p4w-8j-S9n" firstAttribute="top" secondItem="N69-7T-6nK" secondAttribute="top" constant="20" id="2O6-vZ-HkN"/>
                                             <constraint firstItem="WPW-tm-hfE" firstAttribute="leading" secondItem="N69-7T-6nK" secondAttribute="leading" constant="15" id="4uN-TW-KYB"/>
+                                            <constraint firstItem="Pif-JU-KD7" firstAttribute="centerX" secondItem="N69-7T-6nK" secondAttribute="centerX" id="6Ac-5e-03N"/>
                                             <constraint firstAttribute="trailing" secondItem="WPW-tm-hfE" secondAttribute="trailing" constant="15" id="HLH-ks-cfB"/>
                                             <constraint firstAttribute="height" constant="1000" id="LNk-hG-MEw"/>
+                                            <constraint firstItem="Pif-JU-KD7" firstAttribute="top" secondItem="N69-7T-6nK" secondAttribute="top" constant="20" id="OT3-aO-3CP"/>
                                             <constraint firstAttribute="bottom" secondItem="WPW-tm-hfE" secondAttribute="bottom" id="RPf-fj-vb6"/>
-                                            <constraint firstItem="hs7-e5-dig" firstAttribute="top" secondItem="p4w-8j-S9n" secondAttribute="bottom" constant="34" id="ffX-fc-nCa"/>
-                                            <constraint firstItem="p4w-8j-S9n" firstAttribute="centerX" secondItem="N69-7T-6nK" secondAttribute="centerX" id="oS6-3B-l2J"/>
+                                            <constraint firstItem="hs7-e5-dig" firstAttribute="top" secondItem="Pif-JU-KD7" secondAttribute="bottom" constant="37" id="rHA-Eb-Lpl"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDV-yh-bRc">
-                                        <rect key="frame" x="162.5" y="313" width="89" height="28"/>
+                                        <rect key="frame" x="162.5" y="317" width="89" height="28"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="V9m-Jl-AdQ"/>
@@ -131,6 +133,11 @@
                             <constraint firstItem="8HE-qP-rCz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yHM-QU-fZG"/>
                             <constraint firstItem="m75-8E-4ff" firstAttribute="top" secondItem="I1H-3R-dZG" secondAttribute="bottom" id="yLg-mb-loi"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="m75-8E-4ff"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Deatil Diary" id="8Ea-tg-S23"/>
                     <connections>
@@ -139,7 +146,7 @@
                         <outlet property="contentTextView" destination="WPW-tm-hfE" id="nRa-lO-HWA"/>
                         <outlet property="dateTimeLabel" destination="8HE-qP-rCz" id="FKV-zV-DH4"/>
                         <outlet property="diaryImage" destination="hs7-e5-dig" id="R5S-12-ZEB"/>
-                        <outlet property="diaryNameLabel" destination="p4w-8j-S9n" id="Fxb-gm-YHX"/>
+                        <outlet property="diaryNameLabel" destination="Pif-JU-KD7" id="IBu-YR-oXd"/>
                         <outlet property="loadingView" destination="m75-8E-4ff" id="W9k-79-cGd"/>
                     </connections>
                 </viewController>

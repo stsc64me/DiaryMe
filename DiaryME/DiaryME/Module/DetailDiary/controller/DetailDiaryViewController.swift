@@ -12,7 +12,7 @@ class DetailDiaryViewController: UIViewController, UINavigationControllerDelegat
 
     @IBOutlet var dateTimeLabel: UILabel!
     @IBOutlet var btnEdit: UIButton!
-    @IBOutlet var diaryNameLabel: UILabel!
+    @IBOutlet var diaryNameLabel: UITextField!
     
     @IBOutlet var diaryImage: UIImageView!
     @IBOutlet var contentTextView: UITextView!
@@ -30,10 +30,12 @@ class DetailDiaryViewController: UIViewController, UINavigationControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         diaryImage.isUserInteractionEnabled = true
+       
         let doubleTapGest = UITapGestureRecognizer(target: self, action: #selector(self.handleDoubleTapScrollView(recognizer:)))
         diaryImage.addGestureRecognizer(doubleTapGest)
         btnSelectImage.isHidden = true
         self.contentTextView.isEditable = false
+        self.diaryNameLabel.isEnabled = false
         self.setUIDiaryDetail()
     }
     
@@ -96,13 +98,16 @@ class DetailDiaryViewController: UIViewController, UINavigationControllerDelegat
     @IBAction func actionEdit(_ sender: Any) {
         if isEdit == false {
             isEdit = true
+            
             self.btnSelectImage.isHidden = false
             self.btnEdit.setTitle("Done", for: .normal)
+            self.diaryNameLabel.isEnabled = true
             self.contentTextView.isEditable = true
         }else {
             isEdit = false
             self.btnSelectImage.isHidden = true
             self.btnEdit.setTitle("Edit", for: .normal)
+            self.diaryNameLabel.isEnabled = false
             self.contentTextView.isEditable = false
             guard let index = indexIsSelect else {return}
             
